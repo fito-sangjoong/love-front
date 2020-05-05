@@ -22,34 +22,43 @@ const styles = {
 //   return <ListItem button component="a" {...props} />;
 // };
 
-export default ({ excercises }) => (
+export default ({
+  exercises,
+  category,
+  onSelect,
+  exercise: {
+    id,
+    title = "Welcome!",
+    description = "Please select exercise from the list one the left",
+  },
+}) => (
   <Grid container spacing={2}>
     <Grid item xs>
       <Paper style={styles.Paper}>
-        {excercises.map(([group, excercises]) => (
-          <Fragment>
-            <Typography variant="h6" style={{ textTransform: "capitalize" }}>
-              {group}
-            </Typography>
-            <List component="ul" aria-label="secondary mailbox folders">
-              {excercises.map(({ title }) => (
-                <ListItem button>
-                  <ListItemText primary={title} />
-                </ListItem>
-              ))}
-            </List>
-          </Fragment>
-        ))}
+        {exercises.map(([group, exercises]) =>
+          !category || category === group ? (
+            <Fragment key={group}>
+              <Typography variant="h6" style={{ textTransform: "capitalize" }}>
+                {group}
+              </Typography>
+              <List component="ul" aria-label="secondary mailbox folders">
+                {exercises.map(({ id, title }) => (
+                  <ListItem key={id} button onClick={() => onSelect(id)}>
+                    <ListItemText primary={title} />
+                  </ListItem>
+                ))}
+              </List>
+            </Fragment>
+          ) : null
+        )}
       </Paper>
     </Grid>
     <Grid item xs>
       <Paper style={styles.Paper}>
         <Typography variant="h4" style={{ marginTop: 10 }}>
-          Right Panel
+          {title}
         </Typography>
-        <Typography variant="subtitle1">
-          Please select excercise from the list one the left
-        </Typography>
+        <Typography variant="subtitle1">{description}</Typography>
       </Paper>
     </Grid>
   </Grid>

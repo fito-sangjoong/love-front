@@ -1,4 +1,4 @@
-import { configureStore, createSlice } from "@reduxjs/toolkit";
+// import { configureStore, createSlice } from "@reduxjs/toolkit";
 
 export const muscles = ["shoulders", "chest", "arms", "back", "legs"];
 
