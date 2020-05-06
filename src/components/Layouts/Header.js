@@ -1,24 +1,15 @@
 import React from "react";
 import { AppBar, Toolbar, Typography } from "@material-ui/core";
+import CreateDialog from "../Practices/Dialog/Create";
 
 export default (props) => (
   <AppBar position="static">
     <Toolbar>
-      <Typography variant="h6" color="inherit">
+      <Typography variant="h6" color="inherit" style={{ flex: 1 }}>
         Space Reserve System
       </Typography>
-      {/* <IconButton
-        edge="start"
-        className={classes.menuButton}
-        color="inherit"
-        aria-label="menu"
-      >
-        <MenuIcon />
-      </IconButton>
-      <Typography variant="h6" className={classes.title}>
-        News
-      </Typography>
-      <Button color="inherit">Login</Button> */}
+
+      <CreateDialog />
     </Toolbar>
   </AppBar>
 );
