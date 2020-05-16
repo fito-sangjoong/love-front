@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import { Header, Footer } from "./Layouts";
+import Drawer from "./Layouts/Drawer";
 import Practices from "./Practices";
 // import store from "../stores/store";
 import { muscles, exercises } from "../stores/store";
@@ -47,10 +48,11 @@ class App extends React.Component {
       { category, exercise } = this.state;
     return (
       <Fragment>
-        <Header
+        {/* <Header
           muscles={muscles}
           onExerciseCreate={this.handleExerciseCreate}
-        />
+        /> */}
+        <Drawer />
 
         <Practices
           exercise={exercise}
