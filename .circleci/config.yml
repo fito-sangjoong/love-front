@@ -8,7 +8,7 @@ workflows:
   build_and_test:
     jobs:
       - build
-      - test
+      #- test
 jobs:
   build:
     executor: node
