@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Header, Footer } from "./Layouts";
+import { Footer } from "./Layouts";
 import Drawer from "./Layouts/Drawer";
 import Practices from "./Practices";
 // import store from "../stores/store";

@@ -4,7 +4,6 @@ import {
   Toolbar,
   IconButton,
   Typography,
-  Hidden,
   Drawer,
   Divider,
   List,
@@ -86,7 +85,7 @@ export default withStyles(styles)(
     };
 
     render() {
-      const { classes, children } = this.props;
+      const { classes } = this.props;
       const { open } = this.state;
 
       const drawer = (
