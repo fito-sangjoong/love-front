@@ -23,7 +23,7 @@ jobs:
       - persist_to_workspace:
           root: .
           paths:
-            - /build
+            - .
       - aws-s3/sync:
           arguments: |
             --acl public-read \
