@@ -22,7 +22,7 @@ jobs:
       - checkout
       - aws-s3/sync:
           aws-region: AWS_REGION
-          from: build
+          from: /build
           overwrite: true
           to: "s3://front-ci-test"
 
