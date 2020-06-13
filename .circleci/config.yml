@@ -21,9 +21,9 @@ jobs:
     steps:
       - checkout
       - persist_to_workspace:
-          root: ~/
+          root: .
           paths:
-            - build
+            - /build
       - aws-s3/sync:
           arguments: |
             --acl public-read \
