@@ -20,16 +20,12 @@ jobs:
       - image: "cimg/python:3.6"
     steps:
       - checkout
-      - persist_to_workspace:
-          root: .
-          paths:
-            - .
       - aws-s3/sync:
           arguments: |
             --acl public-read \
             --cache-control "max-age=86400"
           aws-region: AWS_REGION
-          from: "build"
+          from: "~/build"
           overwrite: true
           to: "s3://front-ci-test"
 
