@@ -10,14 +10,10 @@ executors:
 jobs:
   build_and_deploy:
     executor: node
-    branches:
-      only:
-        - master
     steps:
       - checkout
       - run: yarn install
       - run: yarn build
-      - checkout
       - aws-s3/sync:
           arguments: |
             --acl public-read \
@@ -32,4 +28,7 @@ workflows:
   version: 2
   build_and_test:
     jobs:
-      - build_and_deploy
+      - build_and_deploy:
+        filters:
+          branches:
+            only: master
