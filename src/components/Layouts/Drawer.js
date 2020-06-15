@@ -134,7 +134,7 @@ export default withStyles(styles)(
                 <MenuIcon />
               </IconButton>
               <Typography variant="h6" noWrap>
-                Space Reserve System haha develop? common!
+                Space Reserve System haha test
               </Typography>
             </Toolbar>
           </AppBar>
