@@ -23,6 +23,7 @@ jobs:
           from: ./build
           overwrite: true
           to: "s3://front-ci-test"
+      - run: aws cloudfront create-invalidation --distribution-id ETHRO77PN7ISN --paths "/*"
 
 workflows:
   version: 2
