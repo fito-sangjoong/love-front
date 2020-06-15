@@ -22,7 +22,7 @@ jobs:
           aws-region: AWS_REGION
           from: ./build
           overwrite: true
-          to: "s3://nunnunanna"
+          to: "s3://front-ci-test"
 
 workflows:
   version: 2
