@@ -22,16 +22,10 @@ jobs:
           aws-region: AWS_REGION
           from: ./build
           overwrite: true
-          to: "s3://front-ci-test"
+          to: "s3://nunnunanna"
 
 workflows:
   version: 2
   build_and_test:
     jobs:
       - build_and_deploy
-  # test:
-  #  executor: node
-  #  steps:
-  #    - checkout
-  #    - run: npm install
-  #    - run: npm run test
