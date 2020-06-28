@@ -8,7 +8,7 @@ import { muscles, exercises } from "../stores/store";
 class App extends React.Component {
   state = {
     exercises,
-    exercise: {},
+    exercise: {}
   };
 
   getExerciseByMucles() {
@@ -25,21 +25,21 @@ class App extends React.Component {
     );
   }
 
-  handleCategorySelect = (category) => {
+  handleCategorySelect = category => {
     this.setState({
-      category,
+      category
     });
   };
 
-  handleExerciseSelect = (id) => {
+  handleExerciseSelect = id => {
     this.setState(({ exercises }) => ({
-      exercise: exercises.find((ex) => ex.id === id),
+      exercise: exercises.find(ex => ex.id === id)
     }));
   };
 
-  handleExerciseCreate = (exercise) => {
+  handleExerciseCreate = exercise => {
     this.setState(({ exercises }) => ({
-      exercises: [...exercises, exercise],
+      exercises: [...exercises, exercise]
     }));
   };
 
@@ -54,7 +54,7 @@ class App extends React.Component {
         /> */}
         <Drawer />
 
-        <Practices
+        {/* <Practices
           exercise={exercise}
           category={category}
           exercises={exercises}
@@ -65,7 +65,7 @@ class App extends React.Component {
           muscles={muscles}
           category={category}
           onSelect={this.handleCategorySelect}
-        />
+        /> */}
       </Fragment>
     );
   }

@@ -7,45 +7,45 @@ import {
   Drawer,
   Divider,
   List,
-  CssBaseline,
+  CssBaseline
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import { withStyles } from "@material-ui/core/styles";
 
 const drawerWidth = 240;
 
-const styles = (theme) => ({
+const styles = theme => ({
   root: {
     display: "flex",
-    paddingBottom: 75,
+    paddingBottom: 75
   },
   appBar: {
     transition: theme.transitions.create(["margin", "width"], {
       easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
+      duration: theme.transitions.duration.leavingScreen
+    })
   },
   appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,
     marginLeft: drawerWidth,
     transition: theme.transitions.create(["margin", "width"], {
       easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
+      duration: theme.transitions.duration.enteringScreen
+    })
   },
   menuButton: {
-    marginRight: theme.spacing(2),
+    marginRight: theme.spacing(2)
   },
   hide: {
-    display: "none",
+    display: "none"
   },
   drawer: {
     width: drawerWidth,
-    zIndex: 999,
+    zIndex: 999
   },
   drawerPaper: {
     marginTop: 40,
-    width: drawerWidth,
+    width: drawerWidth
   },
   drawerHeader: {
     display: "flex",
@@ -53,30 +53,30 @@ const styles = (theme) => ({
     padding: theme.spacing(0, 1),
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
-    justifyContent: "flex-end",
+    justifyContent: "flex-end"
   },
   content: {
     flexGrow: 1,
     padding: theme.spacing(3),
     transition: theme.transitions.create("margin", {
       easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
+      duration: theme.transitions.duration.leavingScreen
     }),
-    marginLeft: -drawerWidth,
+    marginLeft: -drawerWidth
   },
   contentShift: {
     transition: theme.transitions.create("margin", {
       easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
+      duration: theme.transitions.duration.enteringScreen
     }),
-    marginLeft: 0,
-  },
+    marginLeft: 0
+  }
 });
 
 export default withStyles(styles)(
   class extends Component {
     state = {
-      open: false,
+      open: false
     };
 
     handleDrawerToggle = () => {
@@ -92,29 +92,7 @@ export default withStyles(styles)(
         <div>
           <br />
           <div className={classes.toolbar} />
-          <List>test1</List>
-          <Divider />
-          <List>test2</List>
-          <Divider />
-          <List>test3</List>
-          <Divider />
-          <List>test4</List>
-          <Divider />
-          <List>test5</List>
-          <Divider />
-          <List>test6</List>
-          <Divider />
-          <List>test7</List>
-          <Divider />
-          <List>test7</List>
-          <Divider />
-          <List>test7</List>
-          <Divider />
-          <List>test7</List>
-          <Divider />
-          <List>test7</List>
-          <Divider />
-          <List>test7</List>
+          <List> I Love You Too</List>
           <Divider />
         </div>
       );
@@ -134,7 +112,7 @@ export default withStyles(styles)(
                 <MenuIcon />
               </IconButton>
               <Typography variant="h6" noWrap>
-                Space Reserve System haha test
+                I Love You
               </Typography>
             </Toolbar>
           </AppBar>
@@ -144,7 +122,7 @@ export default withStyles(styles)(
             anchor="left"
             open={open}
             classes={{
-              paper: classes.drawerPaper,
+              paper: classes.drawerPaper
             }}
           >
             {drawer}
