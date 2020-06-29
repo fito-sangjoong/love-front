@@ -94,6 +94,8 @@ export default withStyles(styles)(
           <div className={classes.toolbar} />
           <List> I Love You Too</List>
           <Divider />
+          <List> I Love You Too</List>
+          <Divider />
         </div>
       );
 
