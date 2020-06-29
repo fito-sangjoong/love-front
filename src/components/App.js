@@ -1,9 +1,7 @@
 import React, { Fragment } from "react";
-import { Footer } from "./Layouts";
 import Drawer from "./Layouts/Drawer";
-import Practices from "./Practices";
 // import store from "../stores/store";
-import { muscles, exercises } from "../stores/store";
+import { exercises } from "../stores/store";
 
 class App extends React.Component {
   state = {
@@ -44,8 +42,6 @@ class App extends React.Component {
   };
 
   render() {
-    const exercises = this.getExerciseByMucles(),
-      { category, exercise } = this.state;
     return (
       <Fragment>
         {/* <Header
