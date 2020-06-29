@@ -96,6 +96,7 @@ export default withStyles(styles)(
           <Divider />
           <List> I Love You Too</List>
           <Divider />
+          <Divider />
         </div>
       );
 
