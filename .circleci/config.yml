@@ -21,7 +21,7 @@ jobs:
           aws-region: AWS_REGION
           from: ./build
           overwrite: true
-          to: "s3://love-front"
+          to: "s3://love.fitogether.com"
       - run: aws cloudfront create-invalidation --distribution-id E3CG7D2E80N2ZL --paths "/*"
 
 workflows:
